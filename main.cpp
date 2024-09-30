@@ -5,6 +5,7 @@
 #include <fstream>
 using namespace std;
 
+const int SIZE = 4;
 class Movie {
     private:
     string title; //movie title
@@ -27,5 +28,9 @@ class Movie {
 };
 
 int main() {
+    array<Movie, SIZE> tempmovies;
+    ifstream fin ("input.txt");
+    string t;
+    int y;
 
 }
