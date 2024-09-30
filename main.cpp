@@ -28,9 +28,22 @@ class Movie {
 };
 
 int main() {
-    array<Movie, SIZE> tempmovies;
+    array<Movie, SIZE> movies;
     ifstream fin ("input.txt");
-    string t;
+    string t; //temp variables
     int y;
+    string s;
+    int i = 0; //temp index
 
+    if (fin.good()) {
+        while (getline(fin, t)){
+            fin >> y;
+            fin.ignore();
+            getline(fin, s);
+            Movie temp;
+            temp.setTitle
+
+    
+        }
+    }
 }
