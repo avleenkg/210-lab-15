@@ -3,6 +3,7 @@
 #include <iostream>
 #include <array>
 #include <fstream>
+#include <string>
 using namespace std;
 
 const int SIZE = 4;
@@ -16,9 +17,9 @@ class Movie {
     string getTitle() const         { return title; }
     int getYear() const             { return year; }
     string getSW() const            { return sw; }
-    void setTitle(string t)       { title = t; }
-    void setYear(int y)              { year = y; }
-    void setSW(string s)          { sw = s; }
+    void setTitle(string t)         { title = t; }
+    void setYear(int y)             { year = y; }
+    void setSW(string s)            { sw = s; }
 
     void print() {
         cout << "Movie name: " << title << endl;
@@ -49,10 +50,11 @@ int main() {
         }
         fin.close();
 
-        for(int j = 0; i < SIZE; j++){
+        for(int j = 0; j < i; j++){
             movies[j].print();
         }
     }
     else
         cout << "Error. Input file not found.\n";
 }
+
