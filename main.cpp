@@ -19,6 +19,11 @@ class Movie {
     int setYear(int y)              { year = y; }
     string setSW(string s)          { sw = s; }
 
+    void print() {
+        cout << "Movie name: " << title << endl;
+        cout << "\tYear released: " << year << endl;
+        cout << "\tScreenwriter: " << sw << endl << endl;
+    }
 };
 
 int main() {
