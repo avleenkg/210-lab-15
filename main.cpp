@@ -16,9 +16,9 @@ class Movie {
     string getTitle() const         { return title; }
     int getYear() const             { return year; }
     string getSW() const            { return sw; }
-    string setTitle(string t)       { title = t; }
-    int setYear(int y)              { year = y; }
-    string setSW(string s)          { sw = s; }
+    void setTitle(string t)       { title = t; }
+    void setYear(int y)              { year = y; }
+    void setSW(string s)          { sw = s; }
 
     void print() {
         cout << "Movie name: " << title << endl;
@@ -41,9 +41,18 @@ int main() {
             fin.ignore();
             getline(fin, s);
             Movie temp;
-            temp.setTitle
+            temp.setTitle(t);
+            temp.setYear(y);
+            temp.setSW(s);
+            movies[i] = temp;
+            i++;
+        }
+        fin.close();
 
-    
+        for(int j = 0; i < SIZE; j++){
+            movies[j].print();
         }
     }
+    else
+        cout << "Error. Input file not found.\n";
 }
